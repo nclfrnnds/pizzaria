@@ -1,10 +1,15 @@
 const express = require('express');
 const usuarioController = require('../controllers/usuarioController');
 
-let route = express.Router();
+const route = express.Router();
 
-route.get('/', usuarioController.verIndex);
-route.get('/:nome', usuarioController.verUsuario);
+//route.get('/', usuarioController.verIndex);
+//route.get('/:nome', usuarioController.verUsuario);
+
+route.get('/login', usuarioController.formLogin);
+route.post('/login', usuarioController.realizarLogin);
+route.get('/registro', usuarioController.formRegistro);
+route.post('/registro', usuarioController.realizarRegistro);
 
 /*
 route.get('/:nomeCategoria/:subCategoria', (req, res) => {

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../includes/head.ejs', {title:"Cadastro de usuário"}) %>
+<body>
+    <%- include('../includes/header.ejs') %>
+    <main class="container d-flex justify-content-center align-items-center vh-75">
+        <form action="/registro" method="post" class="form-cadastro card p-5">
+            <h2>Cadastro de usuário</h2>
+            <div class="form-group">
+                <label for="nome"> Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome">
+            </div>
+            <div class="form-group">
+                <label for="email"> E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="senha"> Senha:</label>
+                <input type="password" class="form-control" id="senha" name="senha">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Finalizar Cadastro</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
